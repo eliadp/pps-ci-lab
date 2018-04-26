@@ -1,4 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'scala'
+apply plugin: 'org.scoverage'
+apply plugin: 'com.github.maiflai.scalatest'
+
 
 repositories {
     mavenCentral()
@@ -6,4 +10,8 @@ repositories {
 
 dependencies {
     testCompile 'org.scalatest:scalatest_2.12:3.0.1'
+    compile 'org.scala-lang:scala-library:2.12.2'
+    testCompile 'org.scalamock:scalamock-scalatest-support_2.12:3.5.0'
+    scoverage 'org.scoverage:scalac-scoverage-plugin_2.12:1.3.1'
+    scoverage 'org.scoverage:scalac-scoverage-runtime_2.12:1.3.1'
 }
